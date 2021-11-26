@@ -181,6 +181,19 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
+	_npr\
+	_childpid\
+	_ncr\
+	_octal_to_binary\
+        _ln_inode\
+	_attr_of_file\
+	_disp_ls\
+	_head\
+	_ln_unlink\
+	_size\
+	_touch\
+	_read_from_console\
+
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
@@ -249,7 +262,7 @@ qemu-nox-gdb: fs.img xv6.img .gdbinit
 
 EXTRA=\
 	mkfs.c ulib.c user.h cat.c echo.c forktest.c grep.c kill.c\
-	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
+	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c npr.c childpid.c ncr.c octal_to_binary.c ln_inode.c attr_of_file.c disp_ls.c head.c ln_unlink.c size.c touch.c read_from_console.c\
 	printf.c umalloc.c\
 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
 	.gdbinit.tmpl gdbutil\
